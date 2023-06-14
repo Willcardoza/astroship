@@ -1,0 +1,7 @@
+---
+const { bgcolor, bgimageurl } = Astro.props;
+---
+
+<div class={`${bgcolor}`} style=`background-image: url(${bgimageurl})`>
+  <slot/>
+</div>

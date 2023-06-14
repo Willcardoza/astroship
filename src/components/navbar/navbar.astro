@@ -4,6 +4,7 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import Logoag from "@components/logoag.astro";
+import Containernew from "@components/containernew.astro";
 
 const menuitems = [
     
@@ -26,8 +27,8 @@ const menuitems = [
 ];
 ---
 
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center py-7 bg-[#e71919]">
+<Containernew bgcolor="bg-white">
+  <header class="max-w-screen-xl mx-auto px-5 flex flex-col lg:flex-row justify-between items-center py-4">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/">
@@ -65,4 +66,4 @@ const menuitems = [
       </MenuItems>
     </Astronav>
   </header>
-</Container>
+</Containernew>
