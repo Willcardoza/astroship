@@ -2,6 +2,18 @@
 const { bgcolor, bgimageurl } = Astro.props;
 ---
 
-<div class={`${bgcolor}`} style=`background-image: url(${bgimageurl})`>
+<div class={`${bgcolor} back`} style={`background-image: url(${bgimageurl})`})>
   <slot/>
 </div>
+
+
+<style>
+  .home {
+    height: max-content;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }  
+
+</style>

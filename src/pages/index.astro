@@ -6,14 +6,21 @@ import Features from "@components/features.astro";
 import Footer from "@components/footer.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Sectionhome from "@components/sectionhome.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="">
 
-  <Containernew bgcolor="bg-[#E78919]" bgimageurl="../assets/inge-2.webp">
+  <Containernew bgcolor="home bg-[#E78919]" bgimageurl="src/assets/inge-2.webp">
       <Hero/>
   </Containernew>
+
+  <Containernew bgcolor="bg-white">
+    <Sectionhome/>
+  </Containernew>
+  
 
   <!-- <Container>
     <Hero/>
