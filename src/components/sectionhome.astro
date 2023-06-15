@@ -3,9 +3,9 @@ import { Picture } from "@astrojs/image/components";
 import gerencia from "assets/Gerencia.webp";
 ---
 
-<section class="max-w-screen-lg mx-auto px-5 grid md:grid-cols-2 pt-12 md:pb-12">
+<section class="max-w-screen-lg mx-auto px-5 grid md:grid-cols-2 pt-10 pb-10 gap-5 md:gap-0">
 
-    <div>
+    <div class="flex justify-center">
         <Picture 
         src={gerencia}
         alt="Gerencia-arquitectura"
@@ -17,7 +17,7 @@ import gerencia from "assets/Gerencia.webp";
         />
     </div>
 
-    <div class="flex flex-col justify-center gap-3">
+    <div class="flex flex-col justify-center gap-4">
         <h3
           class="text-[#003566] font-bold text-3xl">
           Gerencia de Proyectos
