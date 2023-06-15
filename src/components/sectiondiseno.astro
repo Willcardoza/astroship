@@ -3,35 +3,36 @@ import { Picture } from "@astrojs/image/components";
 import diseno from "assets/Diseno.webp";
 ---
 
-<section class="max-w-screen-lg mx-auto px-5 grid md:grid-cols-2 pt-10 pb-10 gap-5 md:gap-0">
+<section class="max-w-screen-lg mx-auto px-6 md:px-14 grid md:grid-cols-2 pt-12 pb-12 gap-5 md:gap-0">
 
-    <div class="flex flex-col justify-center gap-4">
-        <h3
-          class="text-white font-bold text-3xl">
-          Diseño
-        </h3>
-        <p class="text-white font-md text-lg">
-            Contamos con un equipo de diseñadores altamente capacitados que se encargan de crear planos y diseños funcionales, estéticos y que cumplen con las normas locales.
-        </p>
-        <ul class="text-white font-light text-base">
-            <li>· Formulación y evaluación.</li>
-            <li>· Supervisión, seguimiento y control.</li>
-            <li>· Herramientas de administración.</li>
-            <li>· Liderazgo organizacional.</li>
-            <li>· Consultorías.</li>
-        </ul>
-    </div>
-
-    <div class="flex justify-center">
+    <div class="flex justify-center md:justify-end md:order-last">
         <Picture 
         src={diseno}
         alt="Gerencia-arquitectura"
         widths={[200, 300, 400]}
-        aspectRatio="8:7"
-        sizes="(max-width: 500px) 100vw, 400px"
+        aspectRatio="100:97"
+        sizes="(max-width: 300px) 100vw, 350px"
         loading="eager"
         format="webp"
         />
+    </div>
+
+    <div class="flex flex-col justify-center gap-4 text-center">
+        <h3
+          class="text-white font-bold text-3xl md:text-left">
+          Diseño
+        </h3>
+        <p class="text-white font-md text-lg md:text-left">
+            Contamos con un equipo de diseñadores 
+            altamente capacitados que se encargan 
+            de crear planos y diseños funcionales, 
+            estéticos y que cumplen con las normas locales.
+        </p>
+        <ul class="text-white font-light text-base text-left grid md:block place-content-center">
+            <li>· Planos Conceptuales.</li>
+            <li>· Renders y Diseño de interiores.</li>
+            <li>· Planos Arquitéctonicos, estructurales, eléctricos e hidrosanitarios.</li>
+        </ul>
     </div>
 
 </section>

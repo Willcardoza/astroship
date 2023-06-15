@@ -1,16 +1,16 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import gerencia from "assets/Gerencia.webp";
+import construction from "assets/Construccion.webp";
 ---
 
 <section class="max-w-screen-lg mx-auto px-6 md:px-14 grid md:grid-cols-2 pt-12 pb-12 gap-5 md:gap-0">
 
     <div class="flex justify-center md:justify-start">
         <Picture 
-        src={gerencia}
+        src={construction}
         alt="Gerencia-arquitectura"
         widths={[200, 300, 400]}
-        aspectRatio="8:7"
+        aspectRatio="200:203"
         sizes="(max-width: 300px) 100vw, 350px"
         loading="eager"
         format="webp"
@@ -20,20 +20,21 @@ import gerencia from "assets/Gerencia.webp";
     <div class="flex flex-col justify-center gap-4 text-center">
         <h3
           class="text-[#003566] font-bold text-3xl md:text-left">
-          Gerencia de Proyectos
+          Construcción
         </h3>
         <p class="text-[#003566] font-md text-lg md:text-left">
-            Te ofrecemos la dirección y coordinación 
-            de tu proyecto de construcción o desarrollo 
-            inmobiliario, garantizando que se cumplan 
-            tus objetivos y plazos acordados.
+            Nos encargamos de la construcción de tu proyecto de 
+            principio a fin, utilizando materiales de alta calidad 
+            y cumpliendo con los estándares de seguridad y calidad 
+            más altos. Trabajamos de cerca contigo para asegurarnos 
+            de que se cumplan tus expectativas.
         </p>
         <ul class="text-[#003566] font-light text-base text-left grid md:block place-content-center">
-            <li>· Formulación y evaluación.</li>
-            <li>· Supervisión, seguimiento y control.</li>
-            <li>· Herramientas de administración.</li>
-            <li>· Liderazgo organizacional.</li>
-            <li>· Consultorías.</li>
+            <li>· Edificación Residencial.</li>
+            <li>· Obras Comerciales.</li>
+            <li>· Inmuebles Industriales.</li>
+            <li>· Construcciones Institucionales.</li>
+            <li>· Vías Públicas.</li>
         </ul>
       </div>
 </section>
