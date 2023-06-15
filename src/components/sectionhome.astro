@@ -1,7 +1,39 @@
 ---
-
+import { Picture } from "@astrojs/image/components";
+import gerencia from "assets/Gerencia.webp";
 ---
 
-<section>
-    
+<section class="max-w-screen-lg mx-auto px-5 grid md:grid-cols-2 pt-12 md:pb-12">
+
+    <div>
+        <Picture 
+        src={gerencia}
+        alt="Gerencia-arquitectura"
+        widths={[200, 300, 400]}
+        aspectRatio="8:7"
+        sizes="(max-width: 500px) 100vw, 400px"
+        loading="eager"
+        format="webp"
+        />
+    </div>
+
+    <div class="flex flex-col justify-center gap-3">
+        <h3
+          class="text-[#003566] font-bold text-3xl">
+          Gerencia de Proyectos
+        </h3>
+        <p class="text-[#003566] font-md text-lg">
+            Te ofrecemos la dirección y coordinación 
+            de tu proyecto de construcción o desarrollo 
+            inmobiliario, garantizando que se cumplan 
+            tus objetivos y plazos acordados.
+        </p>
+        <ul class="text-[#003566] font-light text-base">
+            <li>· Formulación y evaluación.</li>
+            <li>· Supervisión, seguimiento y control.</li>
+            <li>· Herramientas de administración.</li>
+            <li>· Liderazgo organizacional.</li>
+            <li>· Consultorías.</li>
+        </ul>
+      </div>
 </section>
