@@ -1,39 +1,36 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
 import bgHome from "assets/bg-home.webp";
-import Link from "@components/ui/link.astro";
 ---
 
-<main class="max-w-screen-xl mx-auto px-5 grid md:grid-cols-3 md:pt-14 md:h-[65vh] pt-12 gap-5">
+<main class="max-w-screen-xl mx-auto px-5 grid md:grid-cols-3 md:pt-14 lg:h-[65vh]
+md:h-[55vh] pt-12 md:gap-0 gap-24">
 
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-4 md:text-left text-center">
     <h1
-      class="text-white text-7xl lg:text-8xl xl:text-8xl font-bold lg:tracking-tight xl:tracking-tighter">
+      class="text-white sm:text-8xl text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
       Hacemos <br> Realidad
     </h1>
-    <p class="text-3xl font-medium mt-3 text-white max-w-xl">
+    <p class="text-3xl font-medium text-white">
       Lo Imaginado
     </p>
-    <div class="mt-6">
-      <Link
-        style="outline"
-        size="md">
+    <div class="">
+      <button class="bg-transparent hover:bg-sky-500 text-white font-base hover:text-white py-1 px-6 border border-white hover:border-transparent rounded-full w-3/4 sm:w-auto">
         Mayor Información
-      </Link>
+      </button>
     </div>
   </div>
 
-  <div class="col-span-2 relative">
+  <div class="md:col-span-2 md:relative">
     <Picture 
     src={bgHome}
     alt="bg-home-arquitectura"
-    widths={[200, 400, 600]}
+    widths={[300, 600, 700]}
     aspectRatio="400:287"
     sizes="(max-width: 800px) 100vw, 720px"
     loading="eager"
     format="avif"
-    class="absolute bottom-0 left-56"
+    class="md:absolute md:bottom-0 lg:left-60 md:left-60"
     />
   </div>
 </main>

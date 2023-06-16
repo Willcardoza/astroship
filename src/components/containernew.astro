@@ -1,20 +1,21 @@
 ---
-const { bgcolor, bgimageurl } = Astro.props;
+const { bgcolor } = Astro.props;
 ---
 
-<div class={`${bgcolor} back`} style={`background-image: url(${bgimageurl})`})>
+<div class={`${bgcolor}`})>
   <slot/>
 </div>
 
 
 <style>
   .home {
+    background-image: url(src/assets/inge-3.webp);
     width: 100%;
     height: 100%;
     background-size: cover;
     background-blend-mode: soft-light;
     background-repeat: no-repeat;
-    background-position: center center;
-  }  
+    background-position: center left;
+  }
 
 </style>

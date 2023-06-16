@@ -28,17 +28,17 @@ const menuitems = [
 ---
 
 <Containernew bgcolor="bg-white">
-  <header class="max-w-screen-xl mx-auto px-5 flex flex-col lg:flex-row justify-between items-center py-4">
+  <header class="max-w-screen-xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center py-3">
     <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
+      <div class="flex w-full md:w-auto items-center justify-between">
         <a href="/">
           <Logoag/></a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+        <div class="block md:hidden">
+          <MenuIcon class="w-4 h-4 text-[#E78919]"/>
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
+      <MenuItems class="hidden w-full md:w-auto mt-2 md:flex md:mt-0">
+        <ul class="flex flex-col md:flex-row md:gap-3 place-items-center">
           {
             menuitems.map((item, index) => (
               <>
@@ -51,10 +51,10 @@ const menuitems = [
                 )}
 
                 {!item.children && (
-                  <li>
+                  <li class="group/item">
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-black hover:text-yellow-500">
+                      class="flex md:px-3 py-2 text-black hover:text-[#E78919]">
                       {item.title}
                     </a>
                   </li>
