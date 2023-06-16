@@ -5,7 +5,7 @@ import bgHome from "assets/bg-home.webp";
 import Link from "@components/ui/link.astro";
 ---
 
-<main class="max-w-screen-xl mx-auto px-5 grid md:grid-cols-2 md:pt-14 md:h-5/6">
+<main class="max-w-screen-xl mx-auto px-5 grid md:grid-cols-3 md:pt-14 md:h-[65vh] pt-12 gap-5">
 
   <div class="flex flex-col">
     <h1
@@ -24,15 +24,16 @@ import Link from "@components/ui/link.astro";
     </div>
   </div>
 
-  <div class="grid place-content-end h-full">
+  <div class="col-span-2 relative">
     <Picture 
     src={bgHome}
     alt="bg-home-arquitectura"
     widths={[200, 400, 600]}
     aspectRatio="400:287"
-    sizes="(max-width: 800px) 100vw, 620px"
+    sizes="(max-width: 800px) 100vw, 720px"
     loading="eager"
     format="avif"
+    class="absolute bottom-0 left-56"
     />
   </div>
 </main>
