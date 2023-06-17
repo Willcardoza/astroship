@@ -11,6 +11,13 @@ import Sectionhead from "@components/sectionhead.astro";
 import Sectionhome from "@components/sectionhome.astro";
 import Sectionconstruction from "@components/sectionconstruction.astro";
 import Layout from "@layouts/Layout.astro";
+
+// Imagenes
+import { Picture } from "@astrojs/image/components";
+import proy1 from "assets/proy-01.webp";
+import proy2 from "assets/proy-02.webp";
+import proy3 from "assets/proy-03.webp";
+import proy4 from "assets/proy-04.webp";
 ---
 
 <Layout title="AG">
@@ -37,8 +44,60 @@ import Layout from "@layouts/Layout.astro";
     </div>
   </div>
 
-  <div class="w-full grid md:grid-cols-4">
-    
+  <div class="w-screen mx-auto grid md:grid-cols-4 sm:grid-cols-2">
+
+    <Picture 
+    src={proy1}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="1:1"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+    <Picture 
+    src={proy2}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="1:1"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+    <Picture 
+    src={proy3}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="1:1"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+    <Picture 
+    src={proy4}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="1:1"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+  </div>
+
+  <div class="bg-[#003566]">
+    <div class="max-w-screen-lg mx-auto px-6 py-8 flex justify-center">
+      <button class="bg-transparent text-md hover:bg-white text-white font-base hover:text-[#003566] py-1 px-6 border border-white hover:border-transparent rounded-full w-3/4 sm:w-auto">
+        Ver más Proyectos
+      </button>
+    </div>
   </div>
 
   
