@@ -3,60 +3,53 @@ import { getCollection } from "astro:content";
 import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
+import Containernew from "@components/containernew.astro";
 
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
+
 ---
 
-<Layout title="About">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
-    </Sectionhead>
+<Layout title="Quienes Somos">
+  <div class="info bg-white">
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                widths={[200, 400]}
-                aspectRatio="1:1"
-                background="#ffffff"
-                fit="cover"
-                position="center"
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-            </div>
+    <main class="max-w-screen-xl mx-auto md:pb-44 px-5 pt-16 pb-52">
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">
-                {teamMemberEntry.data.name}
-              </h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-  </Container>
+      <div class="md:w-1/2 flex flex-col gap-6 text-left">
+        <h3
+          class="text-[#003566] sm:text-7xl text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+          <p class="font-light text-5xl text-[#003566]">Conoce</p> Quienes Somos
+        </h3>
+
+        <p class="text-lg font-light text-[#003566]">
+          AG Grupo Constructor e Inmobiliario, somos una empresa con personal altamente calificado, quince años de experiencia y enfoque al cliente. Nos dedicamos a brindar servicios de gerencia, diseño y construcción en proyectos de desarrollo nacional e internacional.
+        </p>
+
+        <p class="text-lg font-light text-[#003566]">
+          Ofrecemos soluciones personalizadas para cumplir con las necesidades y objetivos de nuestros clientes. Nos enorgullece nuestra capacidad para entregar proyectos de alta calidad, dentro del presupuesto y en el plazo acordado. Si está buscando una empresa de confianza para su proyecto de construcción, contáctenos y estaremos encantados de ayudarlo.
+        </p>
+
+      </div>
+
+    </main>
+
+  </div>
 </Layout>
+
+
+<style>
+    .info {
+    background-image: url(src/assets/Quienes-somos-bg.webp);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+
+  @media (max-width: 768px) {
+
+  .info {
+    background-size: contain;
+    background-position: right bottom;
+  }
+}
+</style>
