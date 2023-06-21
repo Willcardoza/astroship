@@ -1,76 +1,128 @@
 ---
-import { getCollection } from "astro:content";
 import { Picture } from "@astrojs/image/components";
+import Card from "@components/card.astro";
 import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
 
-// Filter blog entries with 'draft: false' & date before current date
-const publishedBlogEntries = await getCollection("blog", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 
-// Sort content entries by publication date
-publishedBlogEntries.sort(function (a, b) {
-  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
-});
+const imagesGallery = [
+  {
+    imageurl: "portal-del-mar.webp",
+    nombre: "Portal del Mar",
+    ejecucion: "Marzo 2019",
+    duracion: "2 Meses",
+    monto: "150,000"
+  },
+  {
+    imageurl: "ofibodega.webp",
+    nombre: "Ofibodegas Pradexa",
+    ejecucion: "Septiembre 2019",
+    duracion: "5 Meses",
+    monto: "1,500,000"
+  },
+  {
+    imageurl: "hotel-las-colinas.webp",
+    nombre: "Hotel Las Colinas",
+    ejecucion: "Noviembre 2019",
+    duracion: "4 Meses",
+    monto: "2,200,000"
+  },
+  {
+    imageurl: "residencial-hamory.webp",
+    nombre: "Residencial Hamory",
+    ejecucion: "Diciembre 2019",
+    duracion: "4 Meses",
+    monto: "111,360"
+  },
+  {
+    imageurl: "urbanizacion-las-delicias.webp",
+    nombre: "Urbanización Las Delicias",
+    ejecucion: "Septiembre 2019",
+    duracion: "4 Meses",
+    monto: "115,696"
+  },
+  {
+    imageurl: "residencial-monte-cielo.webp",
+    nombre: "Residencial Monte Cielo",
+    ejecucion: "Octubre 2019",
+    duracion: "3 Meses",
+    monto: "50,156"
+  },
+  {
+    imageurl: "bahia-nacascolo.webp",
+    nombre: "Bahía Nacascolo",
+    ejecucion: "Enero 2020",
+    duracion: "2 Meses",
+    monto: "111,589"
+  },
+  {
+    imageurl: "proyecto-bodega-zofrapo.webp",
+    nombre: "Proyecto Bodega Zofrapo",
+    ejecucion: "Abril 2020",
+    duracion: "10 Meses",
+    monto: "224,265.33"
+  },
+  {
+    imageurl: "casa-presidencial.webp",
+    nombre: "Casa Presidencial",
+    ejecucion: "2021",
+    duracion: "1 ½ año",
+    monto: "600,000"
+  }
+];
 ---
 
-<Layout title="Blog">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Our Blog</Fragment>
-      <Fragment slot="desc">
-        We write about building startups and thoughts going on our mind.
-      </Fragment>
-    </Sectionhead>
-    <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
+<Layout title="Galeria">
+  <div class="info bg-white">
+
+    <main class="max-w-screen-xl mx-auto px-5 py-16">
+
+      <div class="mb-12">
+        <h3
+          class="text-[#003566] sm:text-7xl text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+          <p class="font-light text-5xl text-[#003566]">Nuestros</p> Proyectos
+        </h3>
+      </div>
+
+      <div class="w-full mx-auto grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+
         {
-          publishedBlogEntries.map((blogPostEntry, index) => (
-            <li>
-              <a href={`/blog/${blogPostEntry.slug}`}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={blogPostEntry.data.image.src}
-                    alt={blogPostEntry.data.image.alt}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    widths={[200, 400, 800]}
-                    aspectRatio="16:9"
-                    background="#ffffff"
-                    fit="cover"
-                    position="center"
-                    loading={index <= 2 ? "eager" : "lazy"}
-                    decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md"
-                  />
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {blogPostEntry.data.category}
-                    </span>
-
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {blogPostEntry.data.title}
-                    </h2>
-
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {blogPostEntry.data.author}
-                      </span>
-                      <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={blogPostEntry.data.publishDate.toISOString()}>
-                        {blogPostEntry.data.publishDate.toDateString()}
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
+          imagesGallery.map( (item, index) => (
+            <>
+              <Card
+                key={index}
+                url={item.imageurl}
+                titulo={item.nombre}
+                ejecucion={item.ejecucion}
+                duracion={item.duracion}
+                monto={item.monto}
+              />
+            </>
           ))
         }
-      </ul>
+
+      </div>
+
     </main>
-  </Container>
+
+  </div>
 </Layout>
+
+<style>
+  .info {
+  background-image: url(src/assets/Galeria-bg.webp);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+/* @media (max-width: 768px) {
+
+.info {
+  background-size: contain;
+  background-position: right bottom;
+}
+} */
+
+</style>
