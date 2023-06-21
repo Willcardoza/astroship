@@ -5,9 +5,9 @@ const { titulo, ejecucion, duracion, monto, url } = Astro.props;
 
 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-    <div class="card-image-container">
+    <div>
         <a href="#">
-            <img class="rounded-t-lg" src=`/src/assets/${url}` alt={titulo}/>
+            <img class="rounded-t-lg aspect-square" src=`/src/assets/${url}` alt={titulo}/>
         </a>
     </div>
 
@@ -22,14 +22,3 @@ const { titulo, ejecucion, duracion, monto, url } = Astro.props;
         </div>
     </div>
 </div>
-
-
-<style>
-
-.card-image-container {
-  width: auto; /* Ajusta el ancho deseado para las imágenes */
-  height: 20vh; /* Ajusta la altura deseada para las imágenes */
-  overflow: hidden; /* Oculta cualquier contenido que exceda las dimensiones del contenedor */
-}
-
-</style>
