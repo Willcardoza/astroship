@@ -1,13 +1,65 @@
 ---
 import { Icon } from "astro-icon";
 import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Button from "@components/ui/button.astro";
 import Contactform from "@components/contactform.astro";
 ---
 
-<Layout title="Contact">
+<Layout title="Contáctanos">
+  <div class="info bg-[#003566]">
+
+    <main class="max-w-screen-xl mx-auto px-5 pt-16 pb-24">
+
+      <div class="mb-12">
+        <h3 class="text-white sm:text-7xl text-4xl font-bold lg:tracking-tight xl:tracking-tighter">
+          Contáctanos
+        </h3>
+      </div>
+
+      <div class="w-full mx-auto grid md:grid-cols-2 gap-6">
+
+        <div>
+          <Contactform />
+        </div>
+
+        <div>
+          <p class="text-lg font-light leading-relaxed text-white">
+            Nos encantaría escuchar de ti y responder a cualquier pregunta o inquietud que puedas tener. En AG Grupo Constructor e Inmobiliario, estamos comprometidos a proporcionar soluciones personalizadas y de alta calidad para cumplir con tus objetivos. ¡Esperamos tener noticias tuyas pronto y poder brindarte nuestro mejor servicio!
+          </p>
+
+          <div class="mt-5">
+            
+            <div class="flex items-center mt-2 space-x-2 text-white">
+              <Icon class="text-white w-4 h-4" name="uil:envelope" />
+              <a href="mailto:hello@astroshipstarter.com">gerencia@agcisa.com</a>
+            </div>
+            
+            <div class="flex items-center mt-2 space-x-2 text-white">
+              <Icon class="text-white w-4 h-4" name="uil:phone" /><a
+                href="tel:+1 (987) 4587 899">(+505) 8806-5941</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</Layout>
+
+<style>
+  .info {
+  background-image: url(src/assets/contactanos-bg.webp);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+</style>
+
+
+<!-- <Layout title="Contáctanos">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Contact</Fragment>
@@ -42,4 +94,4 @@ import Contactform from "@components/contactform.astro";
       </div>
     </div>
   </Container>
-</Layout>
+</Layout> -->
