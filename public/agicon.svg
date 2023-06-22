@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2927mm" height="27.0265mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3529 2703"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:black}
+    .fil0 {fill:#EF7217}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2268094020240">
+   <polygon class="fil0" points="1194,0 1166,0 0,2695 31,2695 531,2695 657,2370 657,2370 884,1785 1178,1023 1446,1721 1446,1721 1671,2305 1672,2305 1717,2423 1717,2424 1717,2424 1820,2695 2332,2695 2367,2695 "/>
+   <path class="fil1" d="M1556 460l270 621c51,-150 349,-853 1426,-392l173 -479c0,0 -1089,-558 -1869,250z"/>
+   <path class="fil1" d="M2565 1297l0 511 458 0 0 300c0,0 -195,165 -747,10l251 578c94,9 673,50 1002,-292l0 -1107 -964 0z"/>
+  </g>
+ </g>
+</svg>
