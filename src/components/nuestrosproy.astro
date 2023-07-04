@@ -1,0 +1,70 @@
+---
+// Imagenes
+import { Picture } from "@astrojs/image/components";
+import proy1 from "assets/proy-01.webp";
+import proy2 from "assets/proy-02.webp";
+import proy3 from "assets/proy-03.webp";
+import proy4 from "assets/proy-04.webp";
+---
+
+<div class="bg-[#003566]">
+    <div class="max-w-screen-lg mx-auto py-3">
+      <h3 class="text-white font-bold text-4xl text-center">Nuestros Proyectos</h3>
+    </div>
+  </div>
+
+  <div class="w-full mx-auto grid md:grid-cols-4 sm:grid-cols-2">
+
+    <Picture 
+    src={proy1}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="4:3"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+    <Picture 
+    src={proy2}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="4:3"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+    <Picture 
+    src={proy3}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="4:3"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+    <Picture 
+    src={proy4}
+    alt="Gerencia-arquitectura"
+    widths={[200, 300, 400]}
+    aspectRatio="4:3"
+    sizes="(max-width: 300px) 100vw, 350px"
+    loading="eager"
+    format="webp"
+    class="w-full"
+    />
+
+  </div>
+
+  <div class="bg-[#003566]">
+    <div class="max-w-screen-lg mx-auto py-3 flex justify-center">
+      <button class="bg-transparent text-md hover:bg-white text-white font-base hover:text-[#003566] py-1 px-6 border border-white hover:border-transparent rounded-full w-3/4 sm:w-auto transition duration-200 ease-in-out">
+        <a href="/galeria">Ver más Proyectos</a> 
+      </button>
+    </div>
+  </div>
